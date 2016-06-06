@@ -1,16 +1,18 @@
 package com.epam.module3;
 
-public class Utils {
+public class StringArray {
     private static final char[] vowel = {'a', 'e', 'y', 'u', 'i', 'o', 'A', 'E', 'Y', 'U', 'I', 'O'};
-    private static int number;
-    private static int vowelNumber[];
+    private int number;
+    private String[] strings;
+    private int vowelNumber[];
 
-    public static void setNumber(int number) {
-        Utils.number = number;
-        Utils.vowelNumber = new int[number];
+    public StringArray(int number) {
+        this.number = number;
+        strings = new String[number];
+        vowelNumber = new int[number];
     }
 
-    public static void countVowelNumber(String[] strings) {
+    public void countVowelNumber() {
         for (int i = 0; i < number; i++) {
             char[] chars = strings[i].toCharArray();
             int counter = 0;
@@ -25,14 +27,7 @@ public class Utils {
         }
     }
 
-    public static void showArrays(String[] strings) {
-        for (int i = 0; i < number; i++) {
-            System.out.println(strings[i]);
-            System.out.println(vowelNumber[i]);
-        }
-    }
-
-    public static void sortByVowelNumber(String[] strings) {
+    public void sortByVowelNumber() {
         String tempString;
         int tempInt;
         for (int i = 0; i < number - 1; i++) {
@@ -49,5 +44,19 @@ public class Utils {
         }
     }
 
+    public void showArrays() {
+        for (int i = 0; i < number; i++) {
+            System.out.println(strings[i]);
+            System.out.println(vowelNumber[i]);
+        }
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setString(int number, String string) {
+        strings[number] = string;
+    }
 
 }
