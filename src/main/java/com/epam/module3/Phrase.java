@@ -26,4 +26,9 @@ public class Phrase {
     public Integer getVowelNumber() {
         return vowelNumber;
     }
+
+    @Override
+    public String toString() {
+        return  "{" + value + "} vowels = " + vowelNumber;
+    }
 }
