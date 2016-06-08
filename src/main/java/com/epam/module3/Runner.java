@@ -3,7 +3,6 @@ package com.epam.module3;
 import java.util.*;
 
 public class Runner {
-    private static final Comparator<Phrase> VOWEL_NUMBER_COMPARATOR = (o1, o2) -> o1.getVowelNumber().compareTo(o2.getVowelNumber());
 
     public static void main(String[] args) {
         boolean repeat = true;
@@ -29,7 +28,8 @@ public class Runner {
         list.forEach(System.out::println);
 
         System.out.println("\nSorted array by number of vowels:");
-        Collections.sort(list, VOWEL_NUMBER_COMPARATOR);
-        list.forEach(System.out::println);
+        SortUtil util = new SortUtil(list);
+        util.sort().forEach(System.out::println);
+
     }
 }
