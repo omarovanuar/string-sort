@@ -28,8 +28,6 @@ public class Runner {
         list.forEach(System.out::println);
 
         System.out.println("\nSorted array by number of vowels:");
-        SortUtil util = new SortUtil(list);
-        util.sort().forEach(System.out::println);
-
+        Utils.sort(list).forEach(System.out::println);
     }
 }
